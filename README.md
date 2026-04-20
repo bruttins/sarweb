@@ -7,7 +7,7 @@ Sarweb is a webapp that helps planning the rotations for training search-and-res
 ## Iteration 1: Create Modules (Version 0.1-0.6)
 - Secure functionality and code architecture
 - Focus on unit- and integrationtesting, manual testing for endresult
-- Cover only simplest edgecases
+- Cover only errors and happy path
 - TDD
 - CLI-Adapter for manual testing
 ## Iteration 2: Create GUI --> MVP (Version 0.6-1.0)
