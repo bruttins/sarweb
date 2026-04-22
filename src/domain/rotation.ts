@@ -4,6 +4,7 @@ export interface Round {
     helper2: string;
     trainee: string;
     observer: string;
+    idle?: string[];
 }
 
 export function createRotation(names: string[]): Round[] {
@@ -46,7 +47,7 @@ function createRotation5to7(names: string[]): Round[] {
     let currentTrainee = names[3];
     const idle = [...names.slice(4)]; // Copy remaining names as idle queue
 
-    rounds.push(createRound(currentHelper1, currentHelper2, currentObserver, currentTrainee));
+    rounds.push(createRound(currentHelper1, currentHelper2, currentObserver, currentTrainee, idle));
 
     for (let i = 1; i < names.length; i++) {
         if (i === 1 || i === 3 || i === 5 || i === 7) {
@@ -62,17 +63,18 @@ function createRotation5to7(names: string[]): Round[] {
             currentTrainee = idle.shift()!;
         }
 
-        rounds.push(createRound(currentHelper1, currentHelper2, currentObserver, currentTrainee));
+        rounds.push(createRound(currentHelper1, currentHelper2, currentObserver, currentTrainee, idle));
     }
 
     return rounds;
 }
 
-function createRound(fig1: string, fig2: string, obs: string, trainee: string): Round {
+function createRound(fig1: string, fig2: string, obs: string, trainee: string, idle: string[] = []): Round {
 	return {
 		helper1: fig1,
 		helper2: fig2,
 		trainee: trainee,
         observer: obs,
-		}
+        idle: [...idle],
+		};
 }
