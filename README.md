@@ -4,7 +4,7 @@ Sarweb is a webapp that helps planning the rotations for training search-and-res
 # Version History
 
 # SDLC
-## Iteration 1: Create Modules (Version 0.1-0.6)
+## Iteration 1: Create Modules (Version 0.1-0.6) – COMPLETE
 - Secure functionality and code architecture
 - Focus on unit- and integrationtesting, manual testing for endresult
 - Cover only errors and happy path
@@ -14,7 +14,9 @@ Sarweb is a webapp that helps planning the rotations for training search-and-res
 - Create Browserapp-Interface
 - Focus on end-to-end- and regression-testing (using tools)
 - BDD
+- Launch
 ## Iteration 3: Optimize quality (Version 1.0-1.5)
+- Create prettier UI
 - Cover for as many edge-cases as possible
 - Refactor code
 - Focus on unit- and regression-testing (using tools)
