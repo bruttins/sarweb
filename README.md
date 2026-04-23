@@ -10,9 +10,9 @@ Sarweb is a webapp that helps planning the rotations for training search-and-res
 - Cover only errors and happy path
 - TDD
 - CLI-Adapter for manual testing
-## Iteration 2: Create GUI --> MVP (Version 0.6-1.0)
+## Iteration 2: Create GUI --> MVP (Version 0.6-1.0) – COMPLETE
 - Create Browserapp-Interface
-- Focus on end-to-end- and regression-testing (using tools)
+- Focus on end-to-end- and regression-testing
 - BDD
 - Launch
 ## Iteration 3: Optimize quality (Version 1.0-1.5)
