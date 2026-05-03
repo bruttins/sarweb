@@ -30,10 +30,10 @@ test('full form happy path', async ({ page }) => {
 test('assert fields and introtext', async ({ page }) => {
   await page.goto('https://bruttins.github.io/sarweb/');
   await expect(page.getByRole('heading', { name: 'SARweb' })).toBeVisible();
-  await expect(page.getByText('Enter participant names')).toBeVisible();
+  await expect(page.getByText('Welcome to SARweb, your go-to')).toBeVisible();
+  await expect(page.getByText('Enter (human) participant')).toBeVisible();
   await expect(page.getByRole('textbox', { name: 'Participant 4' })).toBeVisible();
-  await expect(page.getByText('Click to add another name')).toBeVisible();
-  await expect(page.getByRole('paragraph')).toContainText('Enter participant names separated by commas.');
+  await expect(page.locator('#name-form div').filter({ hasText: 'Click to add another name' })).toBeVisible();
 });
 
 test('create table not clickable at three fills', async ({ page }) => {
