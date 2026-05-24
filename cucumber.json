@@ -1,0 +1,15 @@
+{
+    "default": {
+        "import": [
+            "features/step_definitions/**/*.ts",
+            "features/pages/**/*.ts",
+            "features/support/**/*.ts"
+        ],
+        "importLoader": ["tsx"], 
+        "format": [
+            "progress",
+            "json:reports/cucumber.json",
+            "html:reports/cucumber.html"
+        ]
+    }
+}

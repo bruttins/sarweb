@@ -1,0 +1,315 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "table-generation;verify-the-page-title",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Verify the page title",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 200645167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I navigate to the SARweb home page",
+            "match": {
+              "location": "features/step_definitions/steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 572771790
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 4,
+            "name": "the page title should contain \"SARweb\"",
+            "match": {
+              "location": "features/step_definitions/steps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33184250
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8231833
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "table-generation;successfully-generate-table-with-6-participants",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Successfully Generate table with 6 participants",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 92762083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to the SARweb home page",
+            "match": {
+              "location": "features/step_definitions/steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 210007166
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Sabi"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Reto"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Charly"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Isi"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Roseline"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Peanut"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I enter the participant names:",
+            "match": {
+              "location": "features/step_definitions/steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 194229332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I create the table",
+            "match": {
+              "location": "features/step_definitions/steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32578708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see a table generated for 6 participants",
+            "match": {
+              "location": "features/step_definitions/steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3036290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the table should display the columns \"Round\", \"Observer\", and \"Idle\"",
+            "match": {
+              "location": "features/step_definitions/steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9771709
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2871791
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "table-generation;successfully-generate-table-with-5-participants",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Successfully Generate table with 5 participants",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33085375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I navigate to the SARweb home page",
+            "match": {
+              "location": "features/step_definitions/steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 203915917
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Sabi"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Reto"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Charly"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Isi"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Roseline"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I enter the participant names:",
+            "match": {
+              "location": "features/step_definitions/steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62769416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I create the table",
+            "match": {
+              "location": "features/step_definitions/steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45631916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I should see a table generated for 5 participants",
+            "match": {
+              "location": "features/step_definitions/steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1666249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "the table should display the columns \"Round\", \"Observer\", and \"Idle\"",
+            "match": {
+              "location": "features/step_definitions/steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3459416
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3215749
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "table-generation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Table Generation",
+    "tags": [],
+    "uri": "features/table_generation.feature"
+  }
+]

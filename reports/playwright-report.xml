@@ -1,0 +1,38 @@
+<testsuites id="" name="" tests="15" failures="0" skipped="0" errors="0" time="17.617685">
+<testsuite name="ete.spec.ts" timestamp="2026-05-24T10:15:01.519Z" hostname="chromium" tests="5" failures="0" skipped="0" time="4.957" errors="0">
+<testcase name="has title" classname="ete.spec.ts" time="1.073">
+</testcase>
+<testcase name="full form happy path" classname="ete.spec.ts" time="1.273">
+</testcase>
+<testcase name="assert fields and introtext" classname="ete.spec.ts" time="1.079">
+</testcase>
+<testcase name="create table not clickable at three fills" classname="ete.spec.ts" time="1.122">
+</testcase>
+<testcase name="maximum of 7 fields appear" classname="ete.spec.ts" time="0.41">
+</testcase>
+</testsuite>
+<testsuite name="ete.spec.ts" timestamp="2026-05-24T10:15:01.519Z" hostname="firefox" tests="5" failures="0" skipped="0" time="9.661" errors="0">
+<testcase name="has title" classname="ete.spec.ts" time="1.793">
+</testcase>
+<testcase name="full form happy path" classname="ete.spec.ts" time="2.697">
+</testcase>
+<testcase name="assert fields and introtext" classname="ete.spec.ts" time="2.093">
+</testcase>
+<testcase name="create table not clickable at three fills" classname="ete.spec.ts" time="2.018">
+</testcase>
+<testcase name="maximum of 7 fields appear" classname="ete.spec.ts" time="1.06">
+</testcase>
+</testsuite>
+<testsuite name="ete.spec.ts" timestamp="2026-05-24T10:15:01.519Z" hostname="webkit" tests="5" failures="0" skipped="0" time="15.043" errors="0">
+<testcase name="has title" classname="ete.spec.ts" time="3.425">
+</testcase>
+<testcase name="full form happy path" classname="ete.spec.ts" time="3.794">
+</testcase>
+<testcase name="assert fields and introtext" classname="ete.spec.ts" time="3.496">
+</testcase>
+<testcase name="create table not clickable at three fills" classname="ete.spec.ts" time="3.621">
+</testcase>
+<testcase name="maximum of 7 fields appear" classname="ete.spec.ts" time="0.707">
+</testcase>
+</testsuite>
+</testsuites>
