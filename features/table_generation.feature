@@ -1,4 +1,5 @@
 Feature: Table Generation
+    @SAR-27
     Scenario: Verify the page title
         Given I navigate to the SARweb home page
         Then the page title should contain "SARweb"

@@ -1,0 +1,73 @@
+stages:
+  - test
+  - report
+
+variables:
+  PLAYWRIGHT_BROWSERS_PATH: ${CI_PROJECT_DIR}/.cache/ms-playwright
+  npm_config_cache: ${CI_PROJECT_DIR}/.npm
+
+cache:
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - .npm/
+    - node_modules/
+    - .cache/ms-playwright/
+
+run-bdd-tests:
+  stage: test
+  image: node:20-bookworm
+  before_script:
+    - npm ci --prefer-offline
+    - npx playwright install --with-deps chromium
+  script:
+    - npm run test:cucumber
+  artifacts:
+    name: "bdd-test-reports-${CI_COMMIT_REF_SLUG}"
+    when: always
+    paths:
+      - reports/
+    expire_in: 7 days
+
+upload-to-xray:
+  stage: report
+  image: curlimages/curl:latest
+  dependencies:
+    - run-bdd-tests
+  script:
+    - echo "Authenticating with Jira Cloud Xray API..."
+    - |
+      token=$(curl -s -H "Content-Type: application/json" \
+        -X POST \
+        --data "{\"client_id\": \"$XRAY_CLIENT_ID\", \"client_secret\": \"$XRAY_CLIENT_SECRET\"}" \
+        https://xray.cloud.getxray.app/api/v2/authenticate | tr -d '"')
+    
+    - |
+      if [ -z "$token" ] || [ "$token" = "null" ]; then
+        echo "Error: Authentication with Xray failed. Please check XRAY_CLIENT_ID and XRAY_CLIENT_SECRET variables."
+        exit 1
+      fi
+      echo "Authentication successful!"
+    - echo "Importing Cucumber execution results to Jira Cloud..."
+
+    - |
+      response=$(curl -s -w "%{http_code}" \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer $token" \
+        --data-binary "@reports/cucumber.json" \
+        https://xray.cloud.getxray.app/api/v2/import/execution/cucumber)
+      
+      http_code=$(echo "$response" | tail -c 4)
+      body=$(echo "$response" | head -c -4)
+
+      echo "HTTP Status Code: $http_code"
+      echo "Response Body: $body"
+
+      if [ "$http_code" -ne 200 ] && [ "$http_code" -ne 201 ]; then
+        echo "Error: Failed to upload results to Xray."
+        exit 1
+      fi
+      echo "Results imported successfully!"
+  rules:
+    - when: always
